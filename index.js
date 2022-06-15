@@ -13,8 +13,13 @@ const privateKey = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/priv
 const certificate = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/fullchain.pem', 'utf8')
 
 const credentials = {
+<<<<<<< HEAD
 	key: privateKey,
 	cert: certificate
+=======
+        key: privateKey,
+        cert: certificate
+>>>>>>> f992c407a5ffa18d8522b42893d1cff7f2657bfd
 };
 
 if(process.env.NODE_ENV === 'production') {
