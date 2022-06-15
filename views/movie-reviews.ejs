@@ -1,0 +1,47 @@
+  <%- include('partials/_head.ejs') %> 
+  <title>Document</title>
+</head>
+<body>
+  <%- include('partials/_header.ejs') %> 
+  <section id="reviews">
+    <div class="card-container">
+      <header>
+        <h1>Movie Reviews</h1>
+      </header>
+      <ul>
+      <% movies.forEach((movie) => { %>
+        <li class="card" data-article-uri="/review/<%= movie.slug %> ">
+          <div class="image-wrapper">
+            <picture>
+              <source media="(min-width: 768px)" srcset="<%= movie.image %> ">
+              <img class="article-img" src="<%= movie.image  %> " alt="<%= movie.title %> ">
+            </picture>
+          </div>
+          <div class="posted-at">
+            <span class="rubric">Movie Review</span>
+            <time class="paginate-time"><%= posted %></time>
+          </div>
+          <div class="main-article-content">
+            <a href="/review/<%= movie.slug %> ">
+              <em><span class="headline"><%= movie.metaTitle %></span></em>
+            </a>
+            <span class="teaser"><%= movie.summary %> </span>
+          </div>
+          <div class="byline">
+            <span>By</span>
+            <span><%= movie.author %></span>
+          </div>
+          <span>Stars: <%= movie.stars %></span>
+          <div class="actions">
+            <a href="/delete?id=<%= movie.id %>" onclick="return confirm('Are you sure?')">Delete</a>
+            <a href="/editReview?id=<%= movie.id %>">Edit</a>
+          </div>
+        </li>
+        <%}) %>
+      </ul>
+    </div>
+  </section>
+  <%- include('partials/_footer') %>   
+</body>
+</html>
+  

@@ -1,0 +1,79 @@
+<%- include('partials/_reviewHead.ejs') %> 
+<title>Document</title>
+</head>
+<body>
+<%- include('partials/_header.ejs') %> 
+<section id="reviews">
+  <div class="card-container">
+    <header>
+      <h1>Movie Reviews</h1>
+    </header>
+    <main>
+      <article>
+        <header>
+          <div class="header-wrapper">
+            <div class="primary">
+              <div class="article-header-section rubric-nav">
+                <span class="rubric">Movie Review</span>
+                <time class="paginate-time"><%= posted %></time>
+              </div>
+              <div class="article-header-section">
+                <h1 class="headline-primary"><%= movie.metaTitle %></h1>
+                <div class="byline">
+                  <span class="primary-bylines">
+                    <span>By</span>
+                    <span class="author-name">
+                      <a href="#" class="article-author">
+                        <span><%= movie.author %></span>
+                      </a>
+                    </span>
+
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="body">
+          <div class="article-content">
+            <div class="image-wrapper-outer">
+              <div class="primary-image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="<%= movie.image %> ">
+                  <img class="primary-image" src="<%= movie.image  %> " alt="<%= movie.title %> ">
+                </picture>
+              </div>
+              <div class="image-data">
+                <div class="attribution">
+                  People in the photo in <em><%= movie.title %></em>. 
+                  <span class="credit">Photo: Pictured in Photo</span>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">
+              <%= movie.content  %> 
+            </p>
+            <section class="package-list">
+              <div class="package-list-header">
+                <h2>More Reviews</h2>
+              </div>
+              <ul class="package-list-items">
+                <li class="package-list-item">
+                  <span class="svg-wrapper">
+                    <ion-icon class="link-caret" name="caret-forward-outline" size="large"></ion-icon>
+                  </span>
+                  <a href="#" class="package-list-item-link">
+                    <span class="headline">This is a sample headline</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+</section>
+</body>
+<%- include('partials/_footer') %> 
+</html>
