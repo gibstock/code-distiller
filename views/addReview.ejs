@@ -16,6 +16,8 @@
           <div>Review: <textarea name="content" cols="30" rows="10" value="<%= movies.content %>"><%= movies.content %></textarea></div>
           <div>Stars: <input type="number" name="stars" value="<%= movies.stars %>"/></div>
           <div>Image Link: <input type="text" name="image" value="<%= movies.image %>"> </div>
+          <div>Image Attribution: <input type="text" name="attribution" value="<%= movies.attribution %>" placeholder="Ex: John travolta and Kirstey Ally "> </div>
+          <div>Photo Credit: <input type="text" name="photoCredit" value="<%= movies.photoCredit %>" placeholder="Getty Images"> </div>
           <button>Save</button>
           <input type="hidden" value="<%= movies.id %>">
         </form>

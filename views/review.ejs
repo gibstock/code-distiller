@@ -45,8 +45,8 @@
               </div>
               <div class="image-data">
                 <div class="attribution">
-                  People in the photo in <em><%= movie.title %></em>. 
-                  <span class="credit">Photo: Pictured in Photo</span>
+                  <%= movie.attribution %> in <em><%= movie.title %></em>. 
+                  <span class="credit">Photo: <%= movie.photoCredit  %> </span>
                 </div>
               </div>
             </div>
@@ -58,14 +58,16 @@
                 <h2>More Reviews</h2>
               </div>
               <ul class="package-list-items">
-                <li class="package-list-item">
-                  <span class="svg-wrapper">
-                    <ion-icon class="link-caret" name="caret-forward-outline" size="large"></ion-icon>
-                  </span>
-                  <a href="#" class="package-list-item-link">
-                    <span class="headline">This is a sample headline</span>
-                  </a>
-                </li>
+                <% movies.forEach((linkedMovie) => { %>
+                  <li class="package-list-item">
+                    <span class="svg-wrapper">
+                      <ion-icon class="link-caret" name="caret-forward-outline" size="large"></ion-icon>
+                    </span>
+                    <a href="/review/<%= linkedMovie.slug  %> " class="package-list-item-link">
+                      <span class="headline"><%= linkedMovie.metaTitle %></span>
+                    </a>
+                  </li>
+               <% }) %> 
               </ul>
             </section>
           </div>
