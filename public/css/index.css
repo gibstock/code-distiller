@@ -35,7 +35,7 @@ nav {
 .logo h1 span {
   text-transform: capitalize;
 }
-.c {
+/* .c {
 font-size: 3em;
 }
 .o {
@@ -73,10 +73,13 @@ font-size: 3em;
 }
 .r {
   font-size: 3em;
-}
+}                  */
 .logo a {
   text-decoration: none;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .upper-nav {
   width: 100%;
@@ -159,19 +162,73 @@ font-size: 3em;
 .meta-title {
   font-weight: 800;
 }
+.add-review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+}
+.section-head h1 {
+  margin: 0;
+}
 .form-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 1em auto;
+  padding: 1em 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #111;
 }
 form {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+form div, form input, form textarea {
+  width: 100%;
+}
+form input, form textarea {
+  border: 3px solid hsl(250, 75%, 65%);
+  padding: .5em;
+}
+form div {
+  color: hsl(0, 55%, 45%);
+}
+.form-button-group {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+  margin-top: 1em;
+}
+.form-button-group button {
+  border-radius: 12px;
+  padding: .7em;
+  background-color: hsl(230, 55%, 60%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.form-button-group button:hover {
+  background-color: hsl(230, 55%, 30%);
+
+}
+.form-button-group a {
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  padding: .5em;
+  background-color: hsl(0, 55%, 60%);
+}
+.form-button-group a:hover {
+  background-color: hsl(0, 55%, 30%);
+}
+
 .posted-at {
   font: 13px/14px 'Arial Narrow', Arial, sans-serif;
   color: #5a5a5a;
@@ -337,4 +394,15 @@ article {
   color: #4a4a4a;
   font: 10px/1.6 Georgia, serif;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 450px) {
+  .logo a h1 span {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .add-review {
+    max-width: 750px;
+    margin: 0 auto;
+  }
 }

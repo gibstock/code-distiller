@@ -4,8 +4,10 @@
 <body>
   <%- include('partials/_header.ejs') %> 
   <main>
-    <section>
-      <h1>Write a Review</h1>
+    <section class="add-review">
+      <div class="section-head">
+        <h1>Write a Review</h1>
+      </div>
       <div class="form-container">
         <form method="post">
           <div>Title: <input type="text" name="title" value="<%= movies.title %>"  onfocusout="getTitle()"/></div>
@@ -18,7 +20,10 @@
           <div>Image Link: <input type="text" name="image" value="<%= movies.image %>"> </div>
           <div>Image Attribution: <input type="text" name="attribution" value="<%= movies.attribution %>" placeholder="Ex: John travolta and Kirstey Ally "> </div>
           <div>Photo Credit: <input type="text" name="photoCredit" value="<%= movies.photoCredit %>" placeholder="Getty Images"> </div>
-          <button>Save</button>
+          <div class="form-button-group">
+            <a href="/movie-reviews">Cancel</a>
+            <button type="button">Post</button>
+          </div>
           <input type="hidden" value="<%= movies.id %>">
         </form>
       </div>
