@@ -9,15 +9,16 @@ const https = require('https')
 const http = require('http')
 const PORT = 443
 
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/privkey.pem', 'utf8')
-const certificate = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/fullchain.pem', 'utf8')
 
-const credentials = {
-        key: privateKey,
-        cert: certificate
-};
 
 if(process.env.NODE_ENV === 'production') {
+  const privateKey = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/privkey.pem', 'utf8')
+  const certificate = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/fullchain.pem', 'utf8')
+
+  const credentials = {
+        key: privateKey,
+        cert: certificate
+  };
   const httpsServer = https.createServer(credentials, app)
   httpsServer.listen(443, ()=> console.log(`listening on https://localhost:443`))
   console.log('prod')
@@ -41,7 +42,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
-  res.render('pages/index')
+  res.redirect('/movie-reviews')
 })
 app.use('/movie-reviews', movieReviews)
 app.use('/', review)
