@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
     if(err) throw err;
 
     connection.query(sql, req.query.id, (err, result) => {
+      connection.release()
       if(err) throw err;
       res.redirect('/movie-reviews')
     })

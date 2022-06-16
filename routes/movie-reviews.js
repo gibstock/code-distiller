@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
     if(err) throw err;
 
     connection.query(sql, (err, result) => {
+      connection.release();
       if(err) throw err;
       let postTime = new Date(result[0].createdAt).toLocaleDateString('en-us', { weekday: "long", year: "numeric", month: "short", day: "numeric"})
       res.render('movie-reviews', {
