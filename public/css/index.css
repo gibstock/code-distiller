@@ -434,6 +434,7 @@ article {
     flex-direction: row;
     justify-content: flex-end;
     column-gap: 1em;
+    visibility: hidden;
   }
   .actions::before {
     content: "Admin: ";
