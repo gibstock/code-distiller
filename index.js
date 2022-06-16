@@ -10,23 +10,6 @@ const http = require('http')
 const PORT = 443
 
 
-<<<<<<< HEAD
-const credentials = {
-<<<<<<< HEAD
-	key: privateKey,
-	cert: certificate
-=======
-        key: privateKey,
-        cert: certificate
->>>>>>> f992c407a5ffa18d8522b42893d1cff7f2657bfd
-};
-||||||| f992c40
-const credentials = {
-        key: privateKey,
-        cert: certificate
-};
-=======
->>>>>>> cb086d66d348cc1f69cfcd56ba2a1d3e8046adde
 
 if(process.env.NODE_ENV === 'production') {
   const privateKey = fs.readFileSync('/etc/letsencrypt/live/codedistiller.com/privkey.pem', 'utf8')
