@@ -10,21 +10,21 @@
       </div>
       <div class="form-container">
         <form method="post">
-          <div>Title: <input type="text" name="title" value="<%= movies.title %>"  onfocusout="getTitle()"/></div>
-          <div>Author: <input type="text" name="author" value="<%= movies.author %>"/></div>
-          <div>Meta Title: <input type="text" name="metaTitle" value="<%= movies.metaTitle %>" placeholder="This is the catchy hook"/></div>
-          <div>Summary: <input type="text" name="summary" value="<%= movies.summary %>" placeholder="This is the blurb that teases the review"/></div>
-          <div><input type="text" name="slug" value='' hidden/></div>
-          <div>Review: <textarea name="content" cols="30" rows="10" value="<%= movies.content %>" placeholder="You can use basic HTML here to format your review. <p>Like this kind of stuff</p>"><%= movies.content %></textarea></div>
-          <div>Stars: <input type="number" name="stars" value="<%= movies.stars %>"/></div>
-          <div>Image Link: <input type="text" name="image" value="<%= movies.image %>" placeholder="Google an image, open image in new tab, copy the full link, paste it here"> </div>
-          <div>Image Attribution: <input type="text" name="attribution" value="<%= movies.attribution %>" placeholder="Ex: John travolta and Kirstey Ally "> </div>
-          <div>Photo Credit: <input type="text" name="photoCredit" value="<%= movies.photoCredit %>" placeholder="Ex: Getty Images"> </div>
+          <div>Title: <input type="text" name="title" onfocusout="getTitle()"/></div>
+          <div>Author: <input type="text" name="author" /></div>
+          <div>Meta Title: <input type="text" name="metaTitle" placeholder="This is the catchy hook"/></div>
+          <div>Summary: <input type="text" name="summary" placeholder="This is the blurb that teases the review"/></div>
+          <div><input type="text" name="slug" hidden/></div>
+          <div>Review: <textarea name="content" cols="30" rows="10" placeholder="You can use basic HTML here to format your review. <p>Like this kind of stuff</p>"><%= movies.content %></textarea></div>
+          <div>Stars: <input type="number" name="stars"/></div>
+          <div>Image Link: <input type="text" name="image" placeholder="Google an image, open image in new tab, copy the full link, paste it here"> </div>
+          <div>Image Attribution: <input type="text" name="attribution" placeholder="Ex: John travolta and Kirstey Ally "> </div>
+          <div>Photo Credit: <input type="text" name="photoCredit" placeholder="Ex: Getty Images"> </div>
           <div class="form-button-group">
             <a href="/movie-reviews">Cancel</a>
             <button>Post</button>
           </div>
-          <input type="hidden" value="<%= movies.id %>">
+          <input type="hidden">
         </form>
       </div>
     </section>
