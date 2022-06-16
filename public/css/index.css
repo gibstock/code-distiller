@@ -401,6 +401,9 @@ article {
   font: 10px/1.6 Georgia, serif;
   letter-spacing: 2px;
 }
+.actions {
+  visibility: hidden;
+}
 @media screen and (max-width: 450px) {
   .logo a h1 span {
     font-size: 1em;
