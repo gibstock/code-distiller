@@ -1,10 +1,7 @@
-const li = document.querySelectorAll('li')
+const cards = document.querySelectorAll('.card')
 
-console.log(li)
-
-li.forEach((article) => {
-  article.addEventListener('click', (e) => {
-    console.log(e.target)
-    // window.location = e.target.dataset.article-uri
+cards.forEach((card) => {
+  card.addEventListener('click', (e) => {
+    window.location = card.dataset.articleUri
   })
 })

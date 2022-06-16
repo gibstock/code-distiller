@@ -12,14 +12,14 @@
         <form method="post">
           <div>Title: <input type="text" name="title" value="<%= movies.title %>"  onfocusout="getTitle()"/></div>
           <div>Author: <input type="text" name="author" value="<%= movies.author %>"/></div>
-          <div>Meta Title: <input type="text" name="metaTitle" value="<%= movies.metaTitle %>"/></div>
-          <div>Summary: <input type="text" name="summary" value="<%= movies.summary %>"/></div>
+          <div>Meta Title: <input type="text" name="metaTitle" value="<%= movies.metaTitle %>" placeholder="This is the catchy hook"/></div>
+          <div>Summary: <input type="text" name="summary" value="<%= movies.summary %>" placeholder="This is the blurb that teases the review"/></div>
           <div><input type="text" name="slug" value='' hidden/></div>
           <div>Review: <textarea name="content" cols="30" rows="10" value="<%= movies.content %>"><%= movies.content %></textarea></div>
           <div>Stars: <input type="number" name="stars" value="<%= movies.stars %>"/></div>
-          <div>Image Link: <input type="text" name="image" value="<%= movies.image %>"> </div>
+          <div>Image Link: <input type="text" name="image" value="<%= movies.image %>" placeholder="Google an image, open image in new tab, copy the full link"> </div>
           <div>Image Attribution: <input type="text" name="attribution" value="<%= movies.attribution %>" placeholder="Ex: John travolta and Kirstey Ally "> </div>
-          <div>Photo Credit: <input type="text" name="photoCredit" value="<%= movies.photoCredit %>" placeholder="Getty Images"> </div>
+          <div>Photo Credit: <input type="text" name="photoCredit" value="<%= movies.photoCredit %>" placeholder="Ex: Getty Images"> </div>
           <div class="form-button-group">
             <a href="/movie-reviews">Cancel</a>
             <button>Post</button>
