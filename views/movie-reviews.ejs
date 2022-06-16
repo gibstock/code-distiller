@@ -31,7 +31,6 @@
             <span>By</span>
             <span><%= movie.author %></span>
           </div>
-          <span>Stars: <%= movie.stars %></span>
           <div class="actions">
             <a href="/delete?id=<%= movie.id %>" onclick="return confirm('Are you sure?')">Delete</a>
             <a href="/editReview?id=<%= movie.id %>">Edit</a>
