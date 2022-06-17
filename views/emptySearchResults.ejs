@@ -1,0 +1,78 @@
+<%- include('partials/_reviewHead.ejs') %> 
+<title>Nothing yet</title>
+</head>
+<body>
+<%- include('partials/_header.ejs') %> 
+<section id="reviews">
+  <div class="card-container">
+    <header>
+      <h1>Movie Reviews</h1>
+    </header>
+    <main>
+      <article>
+        <header>
+          <div class="header-wrapper">
+            <div class="primary">
+              <div class="article-header-section rubric-nav">
+                <span class="rubric">Movie Review</span>
+                <time class="paginate-time">never o clock</time>
+              </div>
+              <div class="article-header-section">
+                <h1 class="headline-primary">We don't have that review yet...</h1>
+                <div class="byline">
+                  <span class="primary-bylines">
+                    <span>By</span>
+                    <span class="author-name">
+                      <a href="#" class="article-author">
+                        <span>Dunno</span>
+                      </a>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="body">
+          <div class="article-content">
+            <div class="image-wrapper-outer">
+              <div class="primary-image-wrapper">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="/img/oops.jpg ">
+                  <img class="primary-image" src="/img/oops.jpg" alt="No Movie Found">
+                </picture>
+              </div>
+              <div class="image-data">
+                <div class="attribution">
+                  Nobody in <em>Nothing</em>. 
+                  <span class="credit">Photo: Hmm </span>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">
+              Nothing to see here, yet. 
+            </p>
+            <section class="package-list">
+              <div class="package-list-header">
+                <h2>More Reviews</h2>
+              </div>
+              <ul class="package-list-items">
+               <li class="package-list-item all-reviews">
+                <span class="svg-wrapper">
+                  <ion-icon class="link-caret" name="caret-forward-outline" size="large"></ion-icon>
+                </span>
+                <a href="/movie-reviews" class="package-list-item-link">
+                  <span class="headline">All Reviews</span>
+                </a>
+               </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+</section>
+</body>
+<%- include('partials/_footer') %> 
+</html>

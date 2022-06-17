@@ -15,11 +15,15 @@ router.post('/', (req, res) => {
       let filteredMovie = result.filter((movie) => (
         movie.title.toUpperCase().includes(search.toUpperCase())
       ))
-      res.render('review', {
-        movies: result,
-        movie: filteredMovie[0],
-        posted: postTime
-      })
+      if(filteredMovie.length >= 1) {
+        res.render('review', {
+          movies: result,
+          movie: filteredMovie[0],
+          posted: postTime
+        })
+      } else {
+        res.render('emptySearchResults')
+      }
     })
   })
 })
