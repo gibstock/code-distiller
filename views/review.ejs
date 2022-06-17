@@ -1,5 +1,5 @@
 <%- include('partials/_reviewHead.ejs') %> 
-<title>Document</title>
+<title><%= movie.title %></title>
 </head>
 <body>
 <%- include('partials/_header.ejs') %> 
@@ -58,7 +58,7 @@
                 <h2>More Reviews</h2>
               </div>
               <ul class="package-list-items">
-                <% movies.forEach((linkedMovie) => { %>
+                <% movies.slice(0, 5).forEach((linkedMovie) => { %>
                   <li class="package-list-item">
                     <span class="svg-wrapper">
                       <ion-icon class="link-caret" name="caret-forward-outline" size="large"></ion-icon>
@@ -68,6 +68,14 @@
                     </a>
                   </li>
                <% }) %> 
+               <li class="package-list-item all-reviews">
+                <span class="svg-wrapper">
+                  <ion-icon class="link-caret" name="caret-forward-outline" size="large"></ion-icon>
+                </span>
+                <a href="/movie-reviews" class="package-list-item-link">
+                  <span class="headline">All Reviews</span>
+                </a>
+               </li>
               </ul>
             </section>
           </div>

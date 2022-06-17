@@ -115,9 +115,19 @@ font-size: 3em;
   position: relative;
 }
 .icons-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: .5em;
   align-self: flex-end;
   justify-self: end;
   position: relative;
+}
+.search-box {
+  display: none;
+}
+.search-icon {
+  cursor: pointer;
 }
 .card-container {
   width: 100%;
@@ -330,6 +340,10 @@ article {
   margin: 0;
   padding: 20px 0 16px;
   border-bottom: 1px solid #e7e7e7;
+}
+.package-list-item.all-reviews {
+  display: flex;
+  justify-content: flex-end;
 }
 .package-list-item-link {
   text-decoration: none;

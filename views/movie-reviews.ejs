@@ -1,5 +1,5 @@
   <%- include('partials/_head.ejs') %> 
-  <title>Document</title>
+  <title>Movie Reviews</title>
 </head>
 <body>
   <%- include('partials/_header.ejs') %> 
@@ -30,10 +30,6 @@
           <div class="byline">
             <span>By</span>
             <span><%= movie.author %></span>
-          </div>
-          <div class="actions">
-            <a href="/delete?id=<%= movie.id %>" onclick="return confirm('Are you sure?')">Delete</a>
-            <a href="/editReview?id=<%= movie.id %>">Edit</a>
           </div>
         </li>
         <%}) %>
