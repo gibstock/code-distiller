@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
   res.redirect('/movie-reviews')
 })
 app.use('/movie-reviews', movieReviews)
-app.use('/', review)
+app.use('/review', review)
 app.use('/addReview', addReview)
 app.use('/editReview', editReview)
 app.use('/delete', deleteReview)
