@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
       if(err) throw err;
       let postTime = new Date(result[0].createdAt).toLocaleDateString('en-us', { weekday: "long", year: "numeric", month: "short", day: "numeric"})
       let filteredMovie = result.filter((movie) => (
-        movie.title.toUpperCase().includes(search.toUpperCase())
+        movie.title.toUpperCase().includes(search.toUpperCase().trim())
       ))
       if(filteredMovie.length >= 1) {
         res.render('review', {
