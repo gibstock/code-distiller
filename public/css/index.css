@@ -382,6 +382,20 @@ article {
   text-decoration: none;
   color: #111;
 }
+.secondary-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.secondary-link a {
+  color: #000;
+  font: 11px/13px Georgia, serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+
+}
 .social-section {
   width: 100%;
   display: flex;
@@ -391,11 +405,15 @@ article {
   margin: 2.5em 0 1.5em;
 }
 .follow-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: transparent;
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
   border: none;
+  cursor: pointer;
 }
 .logo-wrapper {
   display: flex;
