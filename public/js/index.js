@@ -14,3 +14,9 @@ searchIcon.addEventListener('click', ()=>{
   form.querySelector('input').focus()
 
 })
+searchIcon.addEventListener('touchstart', ()=>{
+  const form = searchBox.querySelector('form')
+  searchBox.style.display = 'block'
+  form.querySelector('input').focus()
+
+})
