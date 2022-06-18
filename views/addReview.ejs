@@ -10,16 +10,16 @@
       </div>
       <div class="form-container">
         <form method="post">
-          <div>Title: <input type="text" name="title" onfocusout="getTitle()"/></div>
-          <div>Author: <input type="text" name="author" /></div>
-          <div>Meta Title: <input type="text" name="metaTitle" placeholder="This is the catchy hook"/></div>
-          <div>Summary: <input type="text" name="summary" placeholder="This is the blurb that teases the review"/></div>
+          <div>Title: <input type="text" name="title" onfocusout="getTitle()" required/></div>
+          <div>Author: <input type="text" name="author" required /></div>
+          <div>Meta Title: <input type="text" name="metaTitle" placeholder="This is the catchy hook" required/></div>
+          <div>Summary: <input type="text" name="summary" placeholder="This is the blurb that teases the review" required/></div>
           <div><input type="text" name="slug" hidden/></div>
-          <div>Review: <textarea name="content" cols="30" rows="10" placeholder="You can use mardown to format reviews"><%= movies.content %></textarea></div>
-          <div>Stars: <input type="number" name="stars"/></div>
-          <div>Image Link: <input type="text" name="image" placeholder="Add image from url"> </div>
-          <div>Image Attribution: <input type="text" name="attribution" placeholder="Ex: John travolta and Kirstey Ally "> </div>
-          <div>Photo Credit: <input type="text" name="photoCredit" placeholder="Ex: Getty Images"> </div>
+          <div>Review: <textarea name="content" cols="30" rows="10" placeholder="You can use mardown to format reviews" required><%= movies.content %></textarea></div>
+          <div>Stars: <input type="number" name="stars" value="10" required/></div>
+          <div>Image Link: <input type="text" name="image" placeholder="Add image from url" required> </div>
+          <div>Image Attribution: <input type="text" name="attribution" placeholder="Ex: John travolta and Kirstey Ally" required> </div>
+          <div>Photo Credit: <input type="text" name="photoCredit" placeholder="Ex: Getty Images" required> </div>
           <div class="form-button-group">
             <a href="/movie-reviews">Cancel</a>
             <button>Post</button>
