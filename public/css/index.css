@@ -175,6 +175,14 @@ font-size: 3em;
   height: auto;
   padding: 0 2em;
 }
+.in-article-image {
+  display: block;
+  height: 100%;
+  left: 0;
+  object-fit: contain;
+  top: 0;
+  width: 100%;
+}
 .meta-title {
   font-weight: 800;
 }

@@ -1,5 +1,4 @@
 const express = require('express')
-const mysql = require('mysql')
 const path = require('path')
 const bodyParser = require('body-parser')
 require('dotenv').config()
@@ -8,7 +7,6 @@ const fs = require('fs')
 const https = require('https')
 const http = require('http')
 const PORT = 443
-
 
 
 if(process.env.NODE_ENV === 'production') {

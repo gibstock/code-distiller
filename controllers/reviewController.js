@@ -1,4 +1,5 @@
 const pool = require('../data/database').pool
+const marked = require('marked')
 
 exports.getReview = (req, res) => {
   let sql = `SELECT * FROM movies`
@@ -12,9 +13,11 @@ exports.getReview = (req, res) => {
       let filteredMovie = result.filter((movie) => (
         movie.slug === req.params.slug
       ))
+      let unmarked = filteredMovie[0].content
       res.render('review', {
         movies: result,
         movie: filteredMovie[0],
+        content: marked.parse(unmarked),
         posted: postTime
       })
     })
