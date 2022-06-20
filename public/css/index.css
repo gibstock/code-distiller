@@ -531,8 +531,9 @@ article {
     width: 60%;
   }
   .card {
-    display: block;
-    padding-bottom: 4.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1em;
 
   }
   .image-wrapper {

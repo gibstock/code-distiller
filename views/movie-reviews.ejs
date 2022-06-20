@@ -17,19 +17,21 @@
               <img class="article-img" src="<%= movie.image  %> " alt="<%= movie.title %> ">
             </picture>
           </div>
-          <div class="posted-at">
-            <span class="rubric">Movie Review</span>
-            <time class="paginate-time"><%= posted %></time>
-          </div>
-          <div class="main-article-content">
-            <a href="/review/<%= movie.slug %> ">
-              <em><span class="headline"><%= movie.metaTitle %></span></em>
-            </a>
-            <span class="teaser"><%= movie.summary %> </span>
-          </div>
-          <div class="byline">
-            <span>By</span>
-            <span><%= movie.author %></span>
+          <div class="card-content-container">
+            <div class="posted-at">
+              <span class="rubric">Movie Review</span>
+              <time class="paginate-time"><%= posted %></time>
+            </div>
+            <div class="main-article-content">
+              <a href="/review/<%= movie.slug %> ">
+                <em><span class="headline"><%= movie.metaTitle %></span></em>
+              </a>
+              <span class="teaser"><%= movie.summary %> </span>
+            </div>
+            <div class="byline">
+              <span>By</span>
+              <span><%= movie.author %></span>
+            </div>
           </div>
         </li>
         <%}) %>
