@@ -237,7 +237,7 @@ font-size: 3em;
   position: relative;
   padding-bottom: 50%;
 }
-.article-img, .paragraph img{
+.article-img, .article-content p img{
   max-width: 100%;
   height: auto;
   padding: 0 2em;
